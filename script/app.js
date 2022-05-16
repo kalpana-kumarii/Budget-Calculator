@@ -62,10 +62,14 @@ function budgetcalculator(){
         currentBudget=currentBudget-enteredNumber;
         expense=expense+enteredNumber;
         outputResult(currentBudget,income,expense);
-        const divBody= document.querySelector("#expenseInput");
+        // if(enteredNumber!==' ' || enteredNumber!=='NaN'){
+        // }
+            const divBody= document.querySelector("#expenseInput");
         divBody.innerHTML+=`
             <div class="row bg-red px-5 py-2 alert-success m-2">${enteredNumber}</div>
             `;
+        
+        
         userInput.value=" ";
     }
     // function sub(){
