@@ -1,0 +1,28 @@
+
+body{
+    overflow-x: hidden;
+}
+.container{
+    max-width: 1024px;
+   /* max-width: 1200px; */
+   /* margin: 50px auto; */
+    /* border: 1px solid  red; */
+
+}
+/* .row{
+    display: flex;  
+    justify-content: space-evenly;
+} */
+.div1{
+    /* width: 500px; */
+    /* border: 1px solid rgb(124, 24, 206) ; */
+    text-align: center;
+    
+}
+.div2{
+    padding: 20px 50px;
+    /* width: 500px;
+    */
+    /* border: 1px solid black; */
+    text-align: center;
+}

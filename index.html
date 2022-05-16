@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script/vendor.js" defer></script>
+    <script src="script/app.js" defer></script>
+    <title>Budget Calc</title>
+</head>
+
+<body>
+    <div class="container my-5 py-3">
+        <center>  <h1>Budget Calculator</h1>  </center>
+      <hr class="text-muted mb-4">
+        <div class="row mx-auto  py-3">  
+           
+            <div class="col-sm-6  ">
+                <div class=" div1">
+                   <div class="row bg-light ">
+                       <div class="col-sm-6 border ">
+                           <h4 class="py-4 ">Income</h4>
+                       </div>                    
+                       <div class="col-sm-6 border ">
+                           <h4 class="py-4 ">Expenses</h4>
+                       </div>
+                   </div>
+                   <div class="row   ">
+                       <div class="col-sm-6 border py-2 " id="incomeInput">                       
+                           <!-- <div class="row bg-red px-5 py-2 alert-danger m-2">T5000</div>
+                           <div class="row bg-red px-5 py-2 alert-danger m-2">5000</div> -->
+                       </div>
+                       <div class="col-sm-6 border py-2" id="expenseInput">
+                        <!-- <div class="row bg-red px-5 py-2 alert-success m-2">5000</div>
+                        <div class="row bg-red px-5 py-2 alert-success m-2">5000</div> -->
+                       </div>
+                   </div>
+                   <div class="row bg-light ">
+                    <div class="col-sm-6  py-3 ">
+                        <h6 class="">Total Income- <span class="text-danger" id="totalIncome">0</span>
+                           </h6>
+                    </div>                    
+                    <div class="col-sm-6 border py-3 ">
+                        <h6 class="">Total Expenses-<span class="text-success" id="totalExpenses">0</span></h6>
+                    </div>
+                </div>
+                <div class="row bg-light border">
+                    <div class="col-sm-12  ">
+                        <h4 class="py-3 ">Total Budget= <span id="totalBudget">0</span></h4>
+                    </div>                    
+                    
+                </div>
+                </div>
+            </div> 
+            <div class="col-sm-6  ">
+                <div class=" border div2">
+                    <h3>Budget Calculator</h3>
+                   <hr class="text-muted">
+                    <!-- <form action="index.html"> -->
+                        <div class="form-group">
+                          <!-- <label for="exampleFormControlInput1">Email address</label> -->
+                          <input type="text" class="form-control" id="input1" placeholder="value here">
+                        </div>
+                        <div class="form-group">
+                          <!-- <label for="exampleFormControlSelect1">Example select</label> -->
+                          <select class="form-control" id="selectOption" >
+                            <!-- <option>Select</option> -->
+                            <option value="income">Income</option>
+                            <option value="expense">Expense</option>
+                          </select>
+                        </div>
+                        <button type="submit" class="btn btn-success" id="subBtn">Submit</button>
+                      
+                        
+                      <!-- </form> -->
+                </div>
+            </div>        
+               
+                
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
