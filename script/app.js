@@ -7,9 +7,25 @@ const defaultExpense=0;
 let expense=defaultExpense;
 
 // let selectedValue=0;
+
 function getUserInput(){
     return parseInt(userInput.value);
-}
+    }
+// function checkNumeric(){
+//     let text;
+//     userIp=userInput.value;
+//     if(isNaN(userIp) || userIp< 0){
+//       text="input must should be numeric";
+//       document.getElementById("error").innerHTML=text;  
+//     }
+//     else{
+
+//         function getUserInput(){
+//         return parseInt(userInput.value);
+//         }
+//     }
+// }
+    
 function selectValue(){
     // let selectedValue=document.getElementById("selectOption").value;
    
@@ -39,39 +55,47 @@ function selectValue(){
 //     const calDescription=`${resultBeforeCalc} ${opertor} ${calcNumber}`;
 //     outputResult(currentResult,calDescription);
 // }
+function check(){
+
+}
 
 function budgetcalculator(){
     const enteredNumber=getUserInput();  
     const enteredOption=selectValue();
- 
+    if(isNaN(enteredNumber)){
+        document.getElementById("error").innerHTML="Input should be must numeric value";
+    }
+    else{
+        if(enteredOption=="income"){
+            currentBudget=currentBudget+enteredNumber;
+            income=income+enteredNumber;
+            outputResult(currentBudget,income,expense);
+            const divBody= document.querySelector("#incomeInput");
+            divBody.innerHTML+=`
+                <div class="row bg-red px-5 py-2 alert-danger m-2">${enteredNumber}</div>
+                `;
+            userInput.value=" ";
+        }
+        if(enteredOption=="expense"){
+            currentBudget=currentBudget-enteredNumber;
+            expense=expense+enteredNumber;
+            outputResult(currentBudget,income,expense);
+            // if(enteredNumber!==' ' || enteredNumber!=='NaN'){
+            // }
+                const divBody= document.querySelector("#expenseInput");
+            divBody.innerHTML+=`
+                <div class="row bg-red px-5 py-2 alert-success m-2">${enteredNumber}</div>
+                `;
+            
+            
+            userInput.value=" ";
+        }
+    }
 
     // const initialBudget=currentBudget;
     // const income=defaultIncome;
     // const expense=defaultExpense;
-    if(enteredOption=="income"){
-        currentBudget=currentBudget+enteredNumber;
-        income=income+enteredNumber;
-        outputResult(currentBudget,income,expense);
-        const divBody= document.querySelector("#incomeInput");
-        divBody.innerHTML+=`
-            <div class="row bg-red px-5 py-2 alert-danger m-2">${enteredNumber}</div>
-            `;
-        userInput.value=" ";
-    }
-    if(enteredOption=="expense"){
-        currentBudget=currentBudget-enteredNumber;
-        expense=expense+enteredNumber;
-        outputResult(currentBudget,income,expense);
-        // if(enteredNumber!==' ' || enteredNumber!=='NaN'){
-        // }
-            const divBody= document.querySelector("#expenseInput");
-        divBody.innerHTML+=`
-            <div class="row bg-red px-5 py-2 alert-success m-2">${enteredNumber}</div>
-            `;
-        
-        
-        userInput.value=" ";
-    }
+    
     // function sub(){
        
        
